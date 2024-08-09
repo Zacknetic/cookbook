@@ -34,7 +34,7 @@ module.exports = function (config) {
       ]
     },
     reporters: ['progress', 'kjhtml'],
-    browsers: ['Firefox', 'FirefoxHeadless'],
+    browsers: [(process.env.KARMA_BROWSER || 'Firefox')],
     restartOnFileChange: true
   });
 };

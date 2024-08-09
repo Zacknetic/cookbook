@@ -24,8 +24,8 @@ jobs:
     - name: Install dependencies
       run: npm install
 
-    - name: Install Firefox
-      run: sudo apt-get install -y firefox
+    - name: Install Chrome
+      run: sudo apt-get install -y google-chrome-stable
 
-    - name: Run tests
-      run: npm test -- --watch=false --browsers=FirefoxHeadless
+    - name: Run tests with ChromeHeadless
+      run: KARMA_BROWSER=ChromeHeadless npm test -- --watch=false
