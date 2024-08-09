@@ -19,7 +19,7 @@ jobs:
     - name: Set up Node.js
       uses: actions/setup-node@v3
       with:
-        node-version: '16'
+        node-version: '18.x'  # Use Node.js 18.x or higher as required by Angular CLI
 
     - name: Install dependencies
       run: npm install
