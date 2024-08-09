@@ -19,10 +19,13 @@ jobs:
     - name: Set up Node.js
       uses: actions/setup-node@v3
       with:
-        node-version: '18.x'  # Use Node.js 18.x or higher as required by Angular CLI
+        node-version: '18.x'
 
     - name: Install dependencies
       run: npm install
 
+    - name: Install Firefox
+      run: sudo apt-get install -y firefox
+
     - name: Run tests
-      run: npm test -- --watch=false --browsers=ChromeHeadless
+      run: npm test -- --watch=false --browsers=FirefoxHeadless
